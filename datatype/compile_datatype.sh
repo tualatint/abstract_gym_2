@@ -1,0 +1,1 @@
+protoc -I=. --cpp_out=. --python_out=. robot_data.proto

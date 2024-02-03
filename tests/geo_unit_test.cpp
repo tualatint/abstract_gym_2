@@ -1,7 +1,8 @@
-#include <gtest/gtest.h>
 #include "utils/geometry.h" // Make sure to include the header file for your Line class
+#include <gtest/gtest.h>
 
-TEST(LineTest, Length) {
+TEST(LineTest, Length)
+{
     Point p0(0, 0);
     Point p1(3, 4);
     Line line(p0, p1);
@@ -9,7 +10,8 @@ TEST(LineTest, Length) {
     EXPECT_NEAR(line.length(), 5.0, 1e-6); // Allow a small margin of error
 }
 
-TEST(LineTest, ComputeLineFunction) {
+TEST(LineTest, ComputeLineFunction)
+{
     Point p0(0, 0);
     Point p1(1, 1);
     Line line(p0, p1);
@@ -20,7 +22,8 @@ TEST(LineTest, ComputeLineFunction) {
     EXPECT_NEAR(line_function[2], 0.0, 1e-6);
 }
 
-TEST(LineTest, DivideIntoPointSet) {
+TEST(LineTest, DivideIntoPointSet)
+{
     Point p0(0, 0);
     Point p1(3, 4);
     Line line(p0, p1);
@@ -33,7 +36,8 @@ TEST(LineTest, DivideIntoPointSet) {
 
 // Add more tests for other methods as needed
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv)
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

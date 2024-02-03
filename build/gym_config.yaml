@@ -1,0 +1,22 @@
+visualization: false  # Enable or disable visualization
+max_num_steps_per_run: 4000 # max steps in an experiment before terminate
+max_run: 100000       # max number of experiment in a thread
+instance: 16          # threads
+robot_upper_arm: 0.4  # in meters
+robot_forearm: 0.3    # in meters
+target_position: [0.5, -0.2] # in meters
+epsilon: 0.002        # 2 mm
+
+online_q_learning: true
+explore_rate: 0.5
+action_scale: 0.05    # action in range [-action_scale, action_scale] in radian ~2.65 degree per step
+gamma: 0.99           # reward decay rate in Q value calcualtion
+
+# redis & ring buffer storage
+redis_host: "127.0.0.1"
+redis_port: 6379
+ring_buffer_size: 30000 # number of experiments
+
+# python NN module
+zmq_ip: "127.0.0.1"
+zmq_port: 5555

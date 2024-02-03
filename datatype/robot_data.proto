@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message RobotData {
+    repeated float joint_positions = 1;
+    repeated float joint_actions = 2;
+    repeated float EE_positions = 3;
+    repeated float target_EE_positions = 4;
+    float reward = 5;
+    bool collision_flag = 6;
+    bool done_flag = 7;
+}
+
+message RobotDataFrameList {
+  repeated RobotData robot_data_frames = 1;
+}
